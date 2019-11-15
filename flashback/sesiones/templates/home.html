@@ -1,0 +1,341 @@
+{% extends "basegeneric.html" %}
+
+{% block contenido %}
+{%load static%}
+<header>
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in">Flash Back</div>
+                <div class="intro-heading">"Capturando momentos para el recuerdo"</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Servicios</h2>
+                    <h3 class="section-subheading text-muted">
+                        "El amor es como la fotografía. Primero debes aprender las reglas, 
+                        luego olvidarlas y fotografiar desde el corazón"
+                    </h3>
+                </div>
+            </div>
+           
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <!--<i class="glyphicon glyphicon-camera"></i>-->
+                    </span>
+                    <h4 class="service-heading">Fotografía de Recién Nacido</h4>
+                    <p class="text-muted">Sesión para recién nacidos utilizando implementos de Estudio Fotográfico</p>
+                    <img src="{% static 'imagen/babyshoes.jpeg' %}" class="img-responsive" alt="">
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <!--<i class="glyphicon glyphicon-leaf"></i>-->
+                       
+                    <h4 class="service-heading">Fotografías al aire Libre</h4>
+                    <p class="text-muted">Sesiones de familias, parejas e individuales en hermosos lugares al aire libre</p>
+                    <img src="{% static 'imagen/stars.jpeg' %}" class="img-responsive" alt="">
+                </div>
+                <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                          <!--<i class="glyphicon glyphicon-heart"></i>-->
+                           
+                        <h4 class="service-heading">Fotografías de Embarazadas</h4>
+                        <p class="text-muted">Sesión para mujeres embarazadas al aire libre o utilizando implemetos de Estudio Fotográfico</p>
+                        <img src="{% static 'imagen/embarazados.jpeg' %}" class="img-responsive" alt="">
+                    </div>
+                
+            </div>
+            
+        </div>
+    </section>
+
+<!--Nuestros trabajos -->
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Nuestros Trabajos</h2>
+                    <h3 class="section-subheading text-muted">Dedicar mi vida a guardar eternamente la felicidad de las personas nos llena profundamente.
+                         Sonrisas, llantos y millones de emociones capturadas.
+                         Esperamos ser parte de tus momentos más agradables, pero para eso convencete tu mismo
+                    </h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="{% static 'imagen/dad_son.jpeg' %}" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Copos de nieve</h4>
+                        <p class="text-muted">Lindos recuerdos al aire libre disfrutando de la nieve y la familia</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="{% static 'imagen/katy2.jpeg' %}" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Luz de vida</h4>
+                        <p class="text-muted">Ese pedacito del cielo que crece dentro de ti será el amor más grande de tu vida</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="{% static 'imagen/zarita.jpeg' %}" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Solo se tu mismo</h4>
+                        <p class="text-muted">No seas como los demás; es aburrido</p>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </section>
+
+    
+<!--SOBRE NOSOTROS-->
+    <!-- Team Section -->
+    <section id="team" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Sobre Nosotros</h2>
+                    <h3 class="section-subheading text-muted">Conoce nuestro increíble equipo de fotógrafos</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="team-member">
+                        <img src="{% static 'imagen/cami2.jpeg' %}" class="img-responsive img-circle" >
+                        <h4>Camilo Neira</h4>
+                        <p class="text-muted"></p>
+                    </div>
+                </div>
+                <div class="col-sm-5">
+                    <div class="team-member">
+                        <img src="{% static 'imagen/eileen2.jpeg' %}"class="img-responsive img-circle" >
+                        <h4>Eileen Chávez</h4>
+                        <p class="text-muted"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <p class="large text-muted">Flash Back nace como un reto personal,ya que nos apasiona el mundo de la fotografía, una vez que 
+                        te metes en el es imposible salir ya que es un arte muy bonito. El saber de que estas inmortalizando un recuerdo, eso no 
+                        tiene precio , poder mirar una y otra vez esa imagen y revivir ese momento, es una sensación única. Así que debido a nuestrp 
+                        amor a la fotografía decidimos iniciar este  emprendimiento familiar y así poder ayudar a otros a que también inmortalicen sus 
+                        bellos recuerdos"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTÁCTANOS -->
+   
+    <form action="enviar.php" method="post">
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Contacto</h2>
+                    <h3 class="section-subheading text-muted">Escribenos en caso de dudas</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <form name="sentMessage" id="contactForm" novalidate="">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Tu nombre *" id="name" required data-validation-required-message="Por favor ingresa tu nombre.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Tu correo*" id="email" required data-validation-required-message="Por favor ingresa ru e-mail.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" placeholder="Tu celular *" id="phone" required data-validation-required-message="Por favor ingresa tu número.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <textarea class="form-control" placeholder="Tu mensaje *" id="message" required data-validation-required-message="Por favor escribe tu mensaje."></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-12 text-center">
+                                <div id="success"></div>
+                                <a href="gracias.html" class="btn btn-xl" >Enviar Mensaje</a>
+                                
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    </form>
+    <form>
+
+    </form>
+
+    <!-- Portfolio Modal 1 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>Copos de Nieve</h2>
+                            <p class="item-intro text-muted"></p>
+                            <div class="slider">
+                                    <ul>
+                                      <li>
+                                        <img class="img-responsive" src="{% static 'imagen/dantito_catita.jpeg' %}" >
+                                        <img class="img-responsive" src="{% static 'imagen/eyes_dantito.jpeg' %}" >
+                                        <img class="img-responsive" src="{% static 'imagen/snow.jpeg' %}" >
+                                        <img class="img-responsive" src="{% static 'imagen/dad_son.jpeg' %}" >
+                                        <img class="img-responsive" src="{% static 'imagen/desilucion.jpg' %}" >
+                                        <img class="img-responsive" src="{% static 'imagen/dantito.jpeg' %}" >
+                                        <img class="img-responsive" src="{% static 'imagen/meeeyes.jpg' %}" >
+                                        <img class="img-responsive" src="{% static 'imagen/catita.jpeg' %}" >
+                                        <img class="img-responsive" src="{% static 'imagen/nieve.jpeg' %}" >
+                                      </li>
+                                    </ul>
+                                  </div>
+                            <ul class="list-inline">
+                                <li>Fecha: Febrero 2019</li>
+                                <li>Categoría: Familia </li>
+                                <li>Autor: Camilo Neira </li>
+                            </ul>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Cerrar Proyecto</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Portfolio Modal 2 -->
+
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>Luz de Vida</h2>
+                            <p class="item-intro text-muted"></p>
+                            <div class="slider">
+                                    <ul>
+                                      <li>
+                                        <img class="img-responsive" src="{% static 'imagen/katy1.jpeg' %}" >
+                                        <img class="img-responsive" src="{% static 'imagen/kati3.jpeg' %}" >
+                                        <img class="img-responsive" src="{% static 'imagen/katy4.jpeg' %}" >
+                                      </li>
+                                    </ul>
+                            </div>
+                            <ul class="list-inline">
+                                <li>Fecha: Marzo 2019</li>
+                                <li>Categoría: Embarazada </li>
+                                <li>Autor: Eileen Chávez </li>
+                            </ul>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Cerrar Proyecto</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Portfolio Modal 3 -->
+<div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <!-- Project Details Go Here -->
+                        <h2>Solo se tu mismo</h2>
+                        <p class="item-intro text-muted"></p>
+                        <div class="slider">
+                                <ul>
+                                  <li>
+                                    <img class="img-responsive" src="{% static 'imagen/cami.jpeg' %}" >
+                                    <img class="img-responsive" src="{% static 'imagen/eileen2.jpeg' %}" >
+                                    <img class="img-responsive" src="{% static 'imagen/Benja.jpeg' %}" >
+                                    <img class="img-responsive" src="{% static 'imagen/gregory.jpeg' %}" >
+                                    <img class="img-responsive" src="{% static 'imagen/zarita.jpeg' %}" >
+                                    <img class="img-responsive" src="{% static 'imagen/cony.jpeg' %}" >
+                                    <img class="img-responsive" src="{% static 'imagen/Pablito.jpeg' %}" >
+                                    <img class="img-responsive" src="{% static 'imagen/alone2.jpg' %}" >
+                                  </li>
+                                </ul>
+                              </div>
+                        <ul class="list-inline">
+                            <li>Fecha: 2018 </li>
+                            <li>Categoría: Individal </li>
+                            <li>Autor: Camilo Neira y Eileen Chávez </li>
+                        </ul>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Cerrar Proyecto</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock  %}
