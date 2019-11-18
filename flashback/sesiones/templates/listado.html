@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+    <meta charset="utf-8">
+    <title>Reserva</title>
+  {%load static%}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+ </head>
+ <body>
+    <form action="">
+     <h2>Listado de Reservas</h2>
+      <div class="container">
+        <table>
+          <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Fecha</th>
+            <th>Email</th>
+            <th>Telefono</th>
+            <th>Tipo</th>
+            <th>Descripcion</th>
+            <th>Estado</th>
+          </tr>
+
+          {% for re in reserva %}
+          <tr>
+            <td>{{ re.nombre }}</td>
+            <td>{{ re.apellido }}</td>
+            <td>{{ re.fecha }}</td>
+            <td>{{ re.email }}</td>
+            <td>{{ re.telefono }}</td>
+            <td>{{ re.Tipo }}</td>
+            <td>{{ re.descripcion }}</td>
+            <td>{{ re.status }}</td>
+            <td><a href="{% url 'eliminar' re.id %}">Eliminar</a></td>
+            <td><a href="{% url 'modificar' re.id %}">Modificar</a></td>
+          </tr>
+          {% endfor %}
+        </table>
+
+        {% if messages %}
+          {% for m in messages %}
+           <div>{{ m }}</div>
+          {% endfor %}
+        {% endif %}
+      </div>
+    </form>   
+ </body>
+</html>
+   

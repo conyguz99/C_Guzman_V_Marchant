@@ -14,6 +14,7 @@ class Reserva(models.Model):
     apellido = models.CharField(max_length = 50)
     fecha = models.DateTimeField(auto_now_add = False)
     email = models.EmailField(max_length =500)
+    telefono = models.IntegerField(null=True)
     Tipo = models.ForeignKey(Tipo, on_delete=models.SET_NULL, null=True)
     descripcion = models.TextField(blank = True, null= True)
 
@@ -28,3 +29,6 @@ class Reserva(models.Model):
     blank = False,
     default = 'D',
     )
+
+    def __str__(self):
+        return self.nombre

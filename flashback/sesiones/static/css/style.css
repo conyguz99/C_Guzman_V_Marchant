@@ -264,7 +264,7 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url("../imagen/dad_son.jpeg");
+    background-image: url("../imagen/dad_son.JPG");
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
@@ -690,7 +690,7 @@ section h3.section-subheading {
 
 section#contact {
     background-color: #222;
-    background-image: url("../imagen/marcita.jpg");
+    background-image: url("../imagen/daniel.JPG");
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
@@ -810,6 +810,7 @@ ul.social-buttons li a:active {
 .btn:active:focus {
     outline: 0;
 }
+
 
 .portfolio-modal .modal-content {
     padding: 100px 0;

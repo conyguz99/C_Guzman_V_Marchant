@@ -60,7 +60,7 @@
 
 <!--Nuestros trabajos -->
     <!-- Portfolio Grid Section -->
-    <section id="portfolio" class="bg-light-gray">
+     <section id="portfolio" class="bg-light-gray">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -79,11 +79,11 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="{% static 'imagen/dad_son.jpeg' %}" class="img-responsive" alt="">
+                        <img src="{% static 'imagen/dad_son.JPG'%}" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Copos de nieve</h4>
-                        <p class="text-muted">Lindos recuerdos al aire libre disfrutando de la nieve y la familia</p>
+                        <h4>Copos de Nieve</h4>
+                        <p class="text-muted">Lindos recuerdos al aire libre disfrutando de la nieve</p>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
@@ -96,7 +96,7 @@
                         <img src="{% static 'imagen/katy2.jpeg' %}" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Luz de vida</h4>
+                        <h4>Luz de Vida</h4>
                         <p class="text-muted">Ese pedacito del cielo que crece dentro de ti será el amor más grande de tu vida</p>
                     </div>
                 </div>
@@ -111,7 +111,8 @@
                     </a>
                     <div class="portfolio-caption">
                         <h4>Solo se tu mismo</h4>
-                        <p class="text-muted">No seas como los demás; es aburrido</p>
+                        <p class="text-muted">No seas como los demás; 
+                        es aburrido</p>
                     </div>
                 </div>
             
@@ -160,8 +161,8 @@
     </section>
 
     <!-- CONTÁCTANOS -->
-   
-    <form action="enviar.php" method="post">
+   {%load static%}
+    <form action="{%static 'enviar.php' %}" method="post">
     <section id="contact">
         <div class="container">
             <div class="row">
@@ -197,7 +198,7 @@
                             <div class="clearfix"></div>
                             <div class="col-lg-12 text-center">
                                 <div id="success"></div>
-                                <a href="gracias.html" class="btn btn-xl" >Enviar Mensaje</a>
+                                <a href='gracias' class="btn btn-xl" >Enviar Mensaje</a>
                                 
                             </div>
                         </div>
@@ -338,4 +339,5 @@
         </div>
     </div>
 </div>
+
 {% endblock  %}

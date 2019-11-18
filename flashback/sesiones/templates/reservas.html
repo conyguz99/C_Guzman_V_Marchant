@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Reserva</title>
+<!--{%load static%}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">-->
+  </head>
+  <body>
+  <form action="" id="formularioreserva" method="POST">
+    <h2>Reserva</h2>
+    <div class="container">
+      {% csrf_token %}
+       <label for="">Nombre</label><br>
+       <input type="text" name="Nombre" placeholder="Escriba su nombre"><br><br>
+       <label for="">Apellido</label><br>
+       <input type="text" name="Apellido" placeholder="Escriba su apellido"><br><br>
+       <label for="">Fecha Reserva</label><br>
+       <input type="date" name="Fecha"><br><br>
+       <label for="">Correo</label><br>
+       <input type="text" name="Correo" placeholder="Escriba su correo"><br><br>
+       <label for="">Telefono</label><br>
+       <input type="text" name="Telefono" placeholder="Escriba su telefono"><br><br>
+       <label for="">Tipo de Sesion</label><br>
+       <select name="Tipo" id="Tipo">
+          <option value="">Seleccionar</option>
+          {% for re in tipo %}
+          <option value= "{{ id }}">{{ re.sesion }}</option>
+          {% endfor %}
+       </select><br><br>
+       <label for="">Comentarios</label><br>
+       <textarea name="Comentario" placeholder="Escriba su comentario"></textarea><br><br>
+       <label for="">Estado de reserva</label><br>
+       <select name="status" id="status">
+          <option value="">Seleccionar</option>
+          <option value="D">Disponible</option>
+          <option value="R">Reservado</option>
+       </select><br><br>
+       <input type="submit" nombre="btnguardar" id="btnguardar" value="Guardar" >
+       <a href='listado'><input type="button" value="Mostrar Reservas" id="boton" ></a>
+    </div>
+   </form>
+   <h3>{{ mensaje }}</h3>
+   </body>
+</html>
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+    <meta charset="utf-8">
+    <title>Reserva</title>
+  {%load static%}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+ </head>
+ <body>
+    <form action=""id="formularioreserva" method="POST">
+      {% csrf_token %}
+      <input type="hidden" name="txtId" id="txtId" value="{{reserva.id}}">
+      <label for="">Nombre</label><br>
+       <input type="text" name="Nombre" placeholder="Escriba su nombre" value="reserva.nombre"><br><br>
+       <label for="">Apellido</label><br>
+       <input type="text" name="Apellido" placeholder="Escriba su apellido" value="reserva.apellido"><br><br>
+       <label for="">Fecha Reserva</label><br>
+       <input type="date" name="Fecha" value="reserva.fecha"><br><br>
+       <label for="">Correo</label><br>
+       <input type="text" name="Correo" placeholder="Escriba su correo" value="reserva.email"><br><br>
+       <label for="">Telefono</label><br>
+       <input type="text" name="Telefono" placeholder="Escriba su telefono" value="reserva.telefono"><br><br>
+       <label for="">Tipo de Sesion</label><br>
+       <select name="Tipo" id="Tipo" value="reserva.tipo">
+          <option value="">Seleccionar</option>
+          {% for re in tipo %}
+
+          <option {% if re.id == reserva.tipo.id %}
+                 {{ selected }}
+                 {% endif %}
+
+          value= "{{ id }}">{{ re.sesion }}</option>
+          {% endfor %}
+       </select><br><br>
+       <label for="">Comentarios</label><br>
+       <textarea name="Comentario" placeholder="Escriba su comentario" value="reserva.descripcion"></textarea><br><br>
+       <label for="">Estado de reserva</label><br>
+       <select name="status" id="status" value="reserva.status">
+          <option value="">Seleccionar</option>
+          <option value="D">Disponible</option>
+          <option value="R">Reservado</option>
+       </select><br><br>
+     <input type="submit" nombre="btnguardar" id="btnguardar" value="Guardar" >
+    </form>   
+ </body>
+</html>
+   
