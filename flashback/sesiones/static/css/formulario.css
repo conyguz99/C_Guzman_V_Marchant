@@ -9,7 +9,7 @@ body {
 
 .reservas-box {
   width: 550px;
-  height: 830px;
+  height: 780px;
   background: #222;
   color: #fff;
   top: 50%;
@@ -29,6 +29,15 @@ body {
 .reservas-box h2{
   
   text-align: center;
+  
+}
+.reservas-box h3{
+  
+  margin: 0;
+  padding: 0 0 20px;
+  text-align: center;
+  font-size: 22px;
+  color: #000;
   
 }
 
@@ -180,5 +189,48 @@ section.textarea {
  background: transparent;
  width: 100%;
 }
-
+.mostrar-box input[type="submit"] {
+  border: none;
+  outline: none;
+  height: 20px;
+  background: #17d0d5;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 5px;
+}
+.mostrar-box h2{
   
+  text-align: center;
+  
+}
+table {
+   width: 100%;
+   text-align: center;
+   background: #2E2E2E;
+   color: #A4A4A4;
+   font-family: sans-serif;
+}
+th, td {
+   width: 15%;
+   text-align: center;
+   outline: groove;
+   
+}
+a,
+a:hover,
+a:focus,
+a:active,
+a.active {
+    outline: 0;
+}
+
+a {
+    color: #A4A4A4;
+}
+
+a:hover,
+a:focus,
+a:active,
+a.active {
+    color: #17d0d5;
+}

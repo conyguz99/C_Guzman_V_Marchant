@@ -4,10 +4,12 @@
     <meta charset="utf-8">
     <title>Reserva</title>
   {%load static%}
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/formulario.css' %}">
  </head>
  <body>
+   <div class="mostrar-box">
     <form action="">
+    <div class="li">
      <h2>Listado de Reservas</h2>
       <div class="container">
         <table>
@@ -32,19 +34,24 @@
             <td>{{ re.Tipo }}</td>
             <td>{{ re.descripcion }}</td>
             <td>{{ re.status }}</td>
-            <td><a href="{% url 'eliminar' re.id %}">Eliminar</a></td>
-            <td><a href="{% url 'modificar' re.id %}">Modificar</a></td>
+            <td>
+              <a href= " {% url 'eliminar' re.id%} ">eliminar</a>
+            </td>
+            <td>
+              <a href= " {% url 'modificar' re.id%} ">modificar</a>
+            </td>
           </tr>
           {% endfor %}
         </table>
-
         {% if messages %}
           {% for m in messages %}
            <div>{{ m }}</div>
           {% endfor %}
         {% endif %}
       </div>
+    </div>
     </form>   
+  </div>
  </body>
 </html>
    

@@ -44,8 +44,6 @@ def listado(request):
 
     reserva = Reserva.objects.all()
     
-
-
     return render(request, 'listado.html',{'reserva': reserva})
 
 def eliminar(request, id):
