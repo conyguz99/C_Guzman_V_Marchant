@@ -21,7 +21,7 @@ def reservas(request):
         reserva.email = request.POST.get("Correo")
         reserva.telefono = request.POST.get("Telefono")
         tipo = Tipo()
-        tipo =request.POST.get("Tipo")
+        tipo.id = request.POST.get("Tipo")
         reserva.tipo= tipo
         reserva.descripcion = request.POST.get("Comentario")
         reserva.status = request.POST.get("status")
@@ -65,7 +65,7 @@ def eliminar(request, id):
 def modificar(request, id):
     #buscamos la reserva para que el usuario lo pueda modificar
     reserva = Reserva.objects.get(id=id)
-    
+    tipo = Tipo.objects.all()
 
     variables = {
       'reserva': reserva,
@@ -74,16 +74,17 @@ def modificar(request, id):
 
     if request.POST:
         reserva = Reserva()
-        reserva.nombre = request.POST.get('Nombre')
-        reserva.apellido = request.POST.get('Apellido')
-        reserva.fecha = request.POST.get('Fecha')
-        reserva.email = request.POST.get('Correo')
-        reserva.telefono = request.POST.get('Telefono')
+        reserva.id = request.POST.get("id")
+        reserva.nombre = request.POST.get("Nombre")
+        reserva.apellido = request.POST.get("Apellido")
+        reserva.fecha = request.POST.get("Fecha")
+        reserva.email = request.POST.get("Correo")
+        reserva.telefono = request.POST.get("Telefono")
         tipo = Tipo()
-        tipo =request.POST.get('Tipo')
-        reserva.tipo = tipo
-        reserva.descripcion = request.POST.get('Comentario')
-        reserva.status = request.POST.get('status')
+        tipo.id = request.POST.get("Tipo")
+        reserva.Tipo= tipo
+        reserva.descripcion = request.POST.get("Comentario")
+        reserva.status = request.POST.get("status")
 
         try: 
             reserva.save()

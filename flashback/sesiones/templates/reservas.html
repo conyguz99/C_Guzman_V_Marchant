@@ -3,44 +3,50 @@
   <head>
     <meta charset="utf-8">
     <title>Reserva</title>
-<!--{%load static%}
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">-->
+{%load static%}
+    <link rel="stylesheet" href="{% static 'css/formulario.css' %}">
   </head>
   <body>
+  <div class="reservas-box">
   <form action="" id="formularioreserva" method="POST">
     <h2>Reserva</h2>
     <div class="container">
       {% csrf_token %}
-       <label for="">Nombre</label><br>
-       <input type="text" name="Nombre" placeholder="Escriba su nombre"><br><br>
-       <label for="">Apellido</label><br>
-       <input type="text" name="Apellido" placeholder="Escriba su apellido"><br><br>
-       <label for="">Fecha Reserva</label><br>
-       <input type="date" name="Fecha"><br><br>
-       <label for="">Correo</label><br>
-       <input type="text" name="Correo" placeholder="Escriba su correo"><br><br>
-       <label for="">Telefono</label><br>
-       <input type="text" name="Telefono" placeholder="Escriba su telefono"><br><br>
-       <label for="">Tipo de Sesion</label><br>
+       <label for="">Nombre</label>
+       <input type="text" name="Nombre" placeholder="Escriba su nombre">
+       <label for="">Apellido</label>
+       <input type="text" name="Apellido" placeholder="Escriba su apellido">
+       <label for="">Fecha Reserva</label>
+       <input type="date" name="Fecha" data-date-format="dd.mm.YYYY"> 
+       <label for="">Correo</label>
+       <input type="text" name="Correo" placeholder="Escriba su correo">
+       <label for="">Telefono</label>
+       <input type="text" name="Telefono" placeholder="Escriba su telefono">
+       <label for="">Tipo de Sesion</label>
+       <div class="select">
        <select name="Tipo" id="Tipo">
           <option value="">Seleccionar</option>
           {% for re in tipo %}
-          <option value= "{{ id }}">{{ re.sesion }}</option>
+          <option value= "{{ re.id }}">{{ re.sesion }}</option>
           {% endfor %}
-       </select><br><br>
-       <label for="">Comentarios</label><br>
-       <textarea name="Comentario" placeholder="Escriba su comentario"></textarea><br><br>
-       <label for="">Estado de reserva</label><br>
+       </select><br>
+       </div>
+       <label for="">Comentarios</label>
+       <div class="textarea">
+       <textarea name="Comentario" placeholder="Escriba su comentario"></textarea>
+       </div>
+       <label for="">Estado de reserva</label>
        <select name="status" id="status">
           <option value="">Seleccionar</option>
           <option value="D">Disponible</option>
           <option value="R">Reservado</option>
        </select><br><br>
        <input type="submit" nombre="btnguardar" id="btnguardar" value="Guardar" >
-       <a href='listado'><input type="button" value="Mostrar Reservas" id="boton" ></a>
+       <a href='listado'><input type="submit" value="Mostrar Reservas" id="boton" ></a>
     </div>
    </form>
    <h3>{{ mensaje }}</h3>
-   </body>
+  </body>
+</div>
 </html>
 
