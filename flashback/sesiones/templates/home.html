@@ -115,7 +115,35 @@
                         es aburrido</p>
                     </div>
                 </div>
-            
+
+                <div class="col-md-6 col-sm-8 portfolio-item">
+                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="{% static 'imagen/Grad2.jpg'%}" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Celebración Cuarto Medio</h4>
+                        <p class="text-muted">Fiesta de graduación</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-8 portfolio-item">
+                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="{% static 'imagen/b1.jpg'%}" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Sesión bebé</h4>
+                        <p class="text-muted">Bella bebita a sus 6 meses</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -339,5 +367,91 @@
         </div>
     </div>
 </div>
+
+<!--Portafolio Modal 4-->
+<div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <!-- Project Details Go Here -->
+                        <h2>AL fin libre!</h2>
+                        <p class="item-intro text-muted"></p>
+                        <div class="slider">
+                                <ul>
+                                  <li>
+                                    <img class="img-responsive" src="{% static 'imagen/Grad1.jpg' %}" >
+                                    <img class="img-responsive" src="{% static 'imagen/Grad2.jpg' %}" >
+                                    <img class="img-responsive" src="{% static 'imagen/Grad3.jpg' %}" >
+                                    <img class="img-responsive" src="{% static 'imagen/Grad4.jpg' %}" >
+                                    <img class="img-responsive" src="{% static 'imagen/Grad5.jpg' %}" >
+                                    <img class="img-responsive" src="{% static 'imagen/Grad6.jpg' %}" >
+                                    <img class="img-responsive" src="{% static 'imagen/Grad8.jpg' %}" >
+                                    <img class="img-responsive" src="{% static 'imagen/Grad9.jpg' %}" >
+                                  </li>
+                                </ul>
+                              </div>
+                        <ul class="list-inline">
+                            <li>Fecha: 2019 </li>
+                            <li>Categoría: Graduación </li>
+                            <li>Autor: Camilo Neira  </li>
+                        </ul>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Cerrar Proyecto</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Portafolio Modal 5-->
+<div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <!-- Project Details Go Here -->
+                        <h2>Sesión para hermosa bebita</h2>
+                        <p class="item-intro text-muted"></p>
+                        <div class="slider">
+                                <ul>
+                                  <li>
+                                    <img class="img-responsive" src="{% static 'imagen/b1.jpg' %}" >
+                                    <img class="img-responsive" src="{% static 'imagen/b2.jpg' %}" >
+                                    <img class="img-responsive" src="{% static 'imagen/b3.jpg' %}" >
+                                    <img class="img-responsive" src="{% static 'imagen/b4.jpg' %}" >
+                                    <img class="img-responsive" src="{% static 'imagen/b5.jpg' %}" >
+                                    <img class="img-responsive" src="{% static 'imagen/b6.jpg' %}" >
+                                    <img class="img-responsive" src="{% static 'imagen/b7.jpg' %}" >
+                                  </li>
+                                </ul>
+                              </div>
+                        <ul class="list-inline">
+                            <li>Fecha: 2019 </li>
+                            <li>Categoría: Bebé </li>
+                            <li>Autor: Camilo Neira y Eileen Chávez </li>
+                        </ul>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Cerrar Proyecto</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 {% endblock  %}
