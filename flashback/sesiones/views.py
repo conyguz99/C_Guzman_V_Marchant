@@ -15,7 +15,7 @@ def logout(request):
 
 def registro(request):
     return render(request,'registrarse.html')
-
+@login_required()
 def reservas(request):
     tipo = Tipo.objects.all()
     variables = {'tipo': tipo}
