@@ -1,18 +1,22 @@
 from django.shortcuts import render, redirect
 from .models import Tipo, Reserva
 from django.contrib import messages
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, permission_required
+
 # Create your views here.
 def home(request):
     return render(request, 'home.html')
 
 def login(request):
-    return render(request,'login.html')
+     return render(request, 'login.html')
+
+def logout(request):
+     return render(request, 'logout.html')
 
 def registrarse(request):
     return render(request,'registrarse.html')
 
-@login_required
+@login_required()
 def reservas(request):
     tipo = Tipo.objects.all()
     variables = {'tipo': tipo}
