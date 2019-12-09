@@ -12,6 +12,19 @@
     
    <form action="" method="POST"  class="formulario">
     <h1>Ingresa</h1>
+       {% if form.errors %}
+         <p>Su nombre de usuario y contraseña no coinciden. Inténtalo de nuevo.</p>
+       {% endif %}
+
+       {% if next %}
+       {% if user.is_authenticated %}
+          <p>Su cuenta no tiene acceso a esta página. Para proceder,
+          inicie sesión con una cuenta que tenga acceso.</p>
+       {% else %}
+          <p>Inicia sesión para ver esta página.</p>
+       {% endif %}
+       {% endif %}
+       
        {% csrf_token %}
        {{form}}
       

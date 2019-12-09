@@ -16,7 +16,6 @@ def logout(request):
 def registro(request):
     return render(request,'registrarse.html')
 
-@permission_required('sesiones.add_reservas')
 def reservas(request):
     tipo = Tipo.objects.all()
     variables = {'tipo': tipo}
@@ -48,12 +47,14 @@ def gracias(request):
     return render(request, 'gracias.html')
 
 #CRUD de Reservas
+@permission_required('sesiones.view_reservas')
 def listado(request):
 
     reserva = Reserva.objects.all()
     
     return render(request, 'listado.html',{'reserva': reserva})
 
+@permission_required('sesiones.delete_reservas')
 def eliminar(request, id):
 
     reserva = Reserva.objects.get(id=id)
@@ -68,6 +69,7 @@ def eliminar(request, id):
 
     return redirect('listado')
 
+@permission_required('sesiones.change_reservas')
 def modificar(request, id):
     #buscamos la reserva para que el usuario lo pueda modificar
     reserva = Reserva.objects.get(id=id)
