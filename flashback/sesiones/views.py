@@ -1,7 +1,9 @@
 from django.shortcuts import render, redirect
 from .models import Tipo, Reserva
 from django.contrib import messages
+from .forms import CustomeUserForm
 from django.contrib.auth.decorators import login_required, permission_required
+from django.contrib.auth import login, authenticate
 
 # Create your views here.
 def home(request):
@@ -14,7 +16,21 @@ def logout(request):
      return render(request, 'logout.html')
 
 def registro(request):
-    return render(request,'registrarse.html')
+    data = {'form':CustomeUserForm()}
+
+    if request.method == 'POST':
+        formulario = CustomeUserForm(request.POST)
+        if formulario.is_valid():
+         formulario.save()
+         #autenticar al usuario y redirigirlo al inicio
+
+        Username = formulario.cleaned_data[ 'Username' ]
+        password = formulario.cleaned_data[ 'password1' ]
+        user = authenticate(Username=Username, password=password1) 
+        login(request, user)
+        return redirect(to= 'home')
+
+    return render(request,'registrarse.html', data)
 @login_required()
 def reservas(request):
     tipo = Tipo.objects.all()
