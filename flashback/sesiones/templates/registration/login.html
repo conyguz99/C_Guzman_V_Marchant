@@ -16,14 +16,11 @@
        {{form}}
       
        <div>
-         <input type="submit" value="login"   class="button" >
+         <input type="submit" value="Login"   class="button" >
        </div>
-              
-    {% if form.errors %}
-      <p>Su nombre de usuario y contraseña no coinciden. Inténtalo de nuevo.</p>
-    {% endif %}
+    
        <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
-       <p>¿No tienes una cuenta? <a class="link" href="{% url 'registrarse' %}">Registrate </a></p>
+       <p>¿No tienes una cuenta? <a class="link" href="{% url 'registro' %}">Registrate </a></p>
 
       </div>
     </form>

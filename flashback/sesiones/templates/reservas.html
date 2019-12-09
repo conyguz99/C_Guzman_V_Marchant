@@ -42,11 +42,12 @@
           <option value="R">Reservado</option>
        </select><br><br>
        <center>
-       <a href='reservas'>Guardar</a>
+       <a href="{% url 'reservas' %}">Guardar</a>
+       <a href= "{% url 'home' %}">Volver</a>
        </center>
+       <h3>{{ mensaje }}</h3>
     </div>
    </form>
-   <h3>{{ mensaje }}</h3>
   </body>
 </div>
 </html>

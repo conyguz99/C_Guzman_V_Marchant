@@ -13,10 +13,10 @@ def login(request):
 def logout(request):
      return render(request, 'logout.html')
 
-def registrarse(request):
+def registro(request):
     return render(request,'registrarse.html')
 
-@login_required()
+@permission_required('sesiones.add_reservas')
 def reservas(request):
     tipo = Tipo.objects.all()
     variables = {'tipo': tipo}
